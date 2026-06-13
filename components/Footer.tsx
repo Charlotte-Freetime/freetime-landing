@@ -9,6 +9,24 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-ink/5 bg-white/60">
+      {/* Organizer contact strip */}
+      <div className="bg-forest-soft/50">
+        <div className="mx-auto flex max-w-6xl flex-col items-center gap-3 px-4 py-8 text-center sm:flex-row sm:justify-between sm:px-6 sm:text-left">
+          <div>
+            <p className="font-display text-lg font-medium text-ink">
+              {t.footer.organizer_cta}
+            </p>
+            <p className="mt-1 text-sm text-ink/60">{t.footer.organizer_text}</p>
+          </div>
+          <a
+            href="mailto:thefreetimeapp.official@gmail.com"
+            className="shrink-0 rounded-full border-2 border-forest bg-transparent px-6 py-2.5 font-display text-sm font-medium text-forest transition hover:bg-forest hover:text-white"
+          >
+            {t.footer.organizer_button}
+          </a>
+        </div>
+      </div>
+
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-3">
         <div>
           <div className="relative h-9 w-36">
