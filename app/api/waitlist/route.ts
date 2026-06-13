@@ -3,16 +3,13 @@ import { NextResponse } from "next/server";
 // ---------------------------------------------------------------------------
 // Waitlist endpoint
 //
-// Works out of the box (returns success), and can forward signups to a real
-// service by setting ONE of these environment variables on Vercel:
+// Sends each signup to your inbox via Web3Forms AND sends an automatic
+// welcome email back to the person who signed up.
 //
-//   WAITLIST_FORMSPREE_ENDPOINT  e.g. https://formspree.io/f/abcd1234
-//     → create a free form at https://formspree.io (50 submissions/month free)
+// Set this environment variable on Vercel:
+//   WAITLIST_WEB3FORMS_KEY = 5ebfa436-2cf9-4237-b1b5-916317a50b40
 //
-//   WAITLIST_WEB3FORMS_KEY       e.g. 1234abcd-....
-//     → create a free access key at https://web3forms.com (250/month free)
-//
-// Both send each signup straight to your email inbox — no database needed.
+// (Free tier: 250 submissions/month. No database needed.)
 // ---------------------------------------------------------------------------
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -30,32 +27,44 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: "invalid_email" }, { status: 400 });
   }
 
-  const formspree = process.env.WAITLIST_FORMSPREE_ENDPOINT;
   const web3forms = process.env.WAITLIST_WEB3FORMS_KEY;
 
+  if (!web3forms) {
+    console.log(`[waitlist] new signup (no provider configured): ${email}`);
+    return NextResponse.json({ ok: true });
+  }
+
   try {
-    if (formspree) {
-      await fetch(formspree, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({ email, source: "freetime-landing" }),
-      });
-    } else if (web3forms) {
-      await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          access_key: web3forms,
-          subject: "Nuova iscrizione lista d'attesa Freetime",
-          email,
-          source: "freetime-landing",
-        }),
-      });
-    } else {
-      // No provider configured yet: log so signups are visible in
-      // Vercel → Project → Logs while you finish setup.
-      console.log(`[waitlist] new signup: ${email}`);
-    }
+    // 1) Notification to YOU + automatic welcome reply to the user.
+    //    Web3Forms sends the auto-reply when you include the special
+    //    fields below: from_name, replyto and a custom autoresponder.
+    await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({
+        access_key: web3forms,
+        subject: "Nuova iscrizione lista d'attesa Freetime 🎉",
+        from_name: "Freetime",
+        email, // the user's email → used as reply-to
+        source: "freetime-landing",
+        message: `Nuova iscrizione alla lista d'attesa: ${email}`,
+
+        // Automatic confirmation email sent to the user:
+        autoresponse: {
+          subject: "Benvenuto in Freetime! 🎉",
+          message: `Ciao!
+
+Grazie per esserti iscritto alla lista d'attesa di Freetime 💚
+
+Sei ufficialmente tra i primi a scoprire la nuova app per vivere hobby ed esperienze a Roma. Ti scriveremo appena saremo pronti al lancio — sarai tra i primi ad avere accesso.
+
+Nel frattempo seguici su Instagram per restare aggiornato: @official.freetimeapp
+
+A presto,
+Il team di Freetime`,
+        },
+      }),
+    });
   } catch (err) {
     console.error("[waitlist] forwarding failed:", err);
     return NextResponse.json({ ok: false, error: "provider_error" }, { status: 502 });
