@@ -80,9 +80,15 @@ export default function Hero() {
             {t.hero.eyebrow}
           </p>
 
-          <h1 className="mt-6 font-display text-5xl font-light leading-[1.04] tracking-tight text-ink sm:text-6xl lg:text-7xl">
+          <h1
+            className="mt-6 font-display text-5xl font-light leading-[1.04] tracking-tight text-ink sm:text-6xl lg:text-7xl"
+            style={{ fontVariationSettings: '"opsz" 144, "SOFT" 0, "WONK" 0' }}
+          >
             {t.hero.headline_1}{" "}
-            <span className="relative inline-block italic text-forest">
+            <span
+              className="relative inline-block italic text-forest"
+              style={{ fontVariationSettings: '"opsz" 144, "SOFT" 0, "WONK" 0' }}
+            >
               {t.hero.headline_2}
               <svg
                 className="absolute -bottom-2 left-0 w-full text-saffron"
