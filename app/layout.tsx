@@ -8,7 +8,7 @@ const display = Fraunces({
   subsets: ["latin", "latin-ext"],
   variable: "--font-display",
   display: "swap",
-  axes: ["opsz", "SOFT"],
+  axes: ["opsz", "SOFT", "WONK"],
 });
 
 // Figtree: clean, friendly grotesque for body and UI text.
