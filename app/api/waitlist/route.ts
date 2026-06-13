@@ -41,7 +41,12 @@ export async function POST(request: Request) {
     // Notification to YOU + automatic welcome reply to the user.
     const res = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
-      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        "User-Agent":
+          "Mozilla/5.0 (compatible; FreetimeWaitlist/1.0; +https://freetime-app.com)",
+      },
       body: JSON.stringify({
         access_key: web3forms,
         subject: "Nuova iscrizione lista d'attesa Freetime 🎉",
