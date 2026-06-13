@@ -20,15 +20,16 @@ const it = {
     hobbies: "Hobby",
     how: "Come funziona",
     social: "Community",
-    hosts: "Per i creator",
+    values: "Missione",
+    hosts: "Per le attività",
     faq: "FAQ",
     cta: "Lista d'attesa",
   },
   hero: {
-    eyebrow: "La tua versione migliore inizia nel tuo tempo libero",
-    headline_1: "Trasforma il tuo tempo libero",
-    headline_2: "in nuove passioni.",
-    sub: "Scopri hobby, partecipa ad attività e incontra persone che condividono i tuoi interessi.",
+    eyebrow: "Presto a Roma",
+    headline_1: "Scopri cosa fare",
+    headline_2: "vicino a te.",
+    sub: "Trova hobby ed esperienze — anche piccole realtà che non conosci ancora — partecipa, incontra persone e torna ogni volta che vuoi vivere qualcosa di nuovo.",
     note: "Unisciti alla lista d'attesa e sii tra i primi a provare Freetime.",
     cta_primary: "Unisciti alla lista d'attesa",
     cta_secondary: "Scopri di più",
@@ -40,18 +41,18 @@ const it = {
   hobbies: {
     eyebrow: "Per ogni passione",
     title: "C'è un hobby che ti aspetta",
-    sub: "Dalle passioni di sempre a quelle che non sai ancora di avere. Ogni settimana nuove attività vicino a te.",
+    sub: "Dalle passioni di sempre a quelle che non sai ancora di avere. Ogni settimana nuove attività vicino a te — anche da piccole realtà locali ancora poco conosciute.",
     items: [
       { name: "Fotografia", emoji: "📷" },
       { name: "Escursionismo", emoji: "🥾" },
       { name: "Cucina", emoji: "🍝" },
       { name: "Tennis & Padel", emoji: "🎾" },
-      { name: "Calcio", emoji: "⚽" },
+      { name: "Equitazione", emoji: "🐴" },
       { name: "Arte & Ceramica", emoji: "🎨" },
       { name: "Musica", emoji: "🎸" },
-      { name: "Scacchi", emoji: "♟️" },
-      { name: "Fitness & Yoga", emoji: "🧘" },
-      { name: "Gaming", emoji: "🎮" },
+      { name: "Benessere & Yoga", emoji: "🧘" },
+      { name: "Degustazioni", emoji: "🍷" },
+      { name: "Artigianato", emoji: "💍" },
       { name: "Danza", emoji: "💃" },
       { name: "Lingue", emoji: "🗣️" },
     ],
@@ -59,39 +60,39 @@ const it = {
   },
   how: {
     eyebrow: "Come funziona",
-    title: "Quattro passi verso la tua prossima passione",
+    title: "Scopri, partecipa, ripeti (o cambia)",
     steps: [
       {
-        title: "Scopri nuovi hobby",
-        text: "Esplora attività ed esperienze vicino a te, scelte in base ai tuoi interessi.",
+        title: "Scopri cosa c'è vicino a te",
+        text: "Esplora hobby ed esperienze nella tua zona, comprese piccole realtà locali che meritano di essere conosciute.",
       },
       {
-        title: "Trova persone con i tuoi interessi",
-        text: "Profili e community ti aiutano a incontrare chi condivide le tue passioni.",
+        title: "Scegli e partecipa",
+        text: "Trova qualcosa che ti incuriosisce e prenota il tuo posto in pochi tocchi.",
       },
       {
-        title: "Partecipa ad attività ed eventi",
-        text: "Prenota il tuo posto in pochi tocchi e vivi l'esperienza dal vivo.",
+        title: "Incontra persone come te",
+        text: "Ogni attività è un'occasione per conoscere persone che condividono i tuoi interessi.",
       },
       {
-        title: "Costruisci la tua community",
-        text: "Resta in contatto, crea gruppi e trasforma un incontro in un'abitudine.",
+        title: "Torna o scopri qualcosa di nuovo",
+        text: "Ti è piaciuto? Ripeti e diventa parte della community. Vuoi altro? C'è sempre una nuova attività da provare.",
       },
     ],
   },
   social: {
-    eyebrow: "Molto più di un marketplace",
+    eyebrow: "Molto più di un elenco di attività",
     title: "Un social network per la vita reale",
-    sub: "Freetime unisce la scoperta di esperienze a una vera community: ogni attività è un'occasione per conoscere persone.",
+    sub: "Freetime unisce la scoperta di esperienze vicino a te a una vera community: ogni attività è un'occasione per conoscere persone, imparare qualcosa e condividere il momento.",
     features: [
       {
         title: "Profili personali",
-        text: "Racconta chi sei attraverso le tue passioni, non solo le tue foto.",
+        text: "Racconta chi sei attraverso i tuoi hobby e le attività che ami.",
         emoji: "👤",
       },
       {
         title: "Segui altri utenti",
-        text: "Resta aggiornato sulle attività delle persone che ti ispirano.",
+        text: "Resta in contatto con le persone che incontri alle attività.",
         emoji: "➕",
       },
       {
@@ -110,9 +111,9 @@ const it = {
         emoji: "💬",
       },
       {
-        title: "Eventi locali",
-        text: "Dal corso di ceramica al torneo di padel: tutto nella tua città.",
-        emoji: "🗓️",
+        title: "Condividi i momenti",
+        text: "Racconta le tue esperienze e ispira altri a provarle.",
+        emoji: "✨",
       },
     ],
     phone: {
@@ -121,43 +122,65 @@ const it = {
       card1_meta: "Sab 15:00 · Trastevere · 4 posti",
       card2_title: "Padel — livello base",
       card2_meta: "Dom 10:30 · EUR · 2 posti",
-      card3_title: "Aperitivo di lingue 🇮🇹🇬🇧🇪🇸",
-      card3_meta: "Gio 19:00 · Monti · 12 posti",
+      card3_title: "Aerial yoga",
+      card3_meta: "Mar 18:30 · Monti · 6 posti",
       join: "Partecipa",
     },
   },
-  hosts: {
-    eyebrow: "Per host e creator",
-    title: "Condividi la tua passione. Falla diventare qualcosa di più.",
-    sub: "Su Freetime chiunque può organizzare attività: dall'insegnante di yoga al fotografo, dall'appassionato di scacchi al sommelier.",
+  values: {
+    eyebrow: "Valori e missione",
+    title: "Perché esiste Freetime",
+    mission_label: "La nostra missione",
+    mission:
+      "Rendere semplice scoprire e vivere esperienze di valore vicino a te — dando visibilità anche alle piccole realtà locali che meritano di essere conosciute — attraverso una piattaforma affidabile, intuitiva e pensata per le persone.",
+    vision_label: "Cosa vogliamo creare",
+    vision:
+      "Un luogo dove il tempo libero diventa un'occasione per crescere, divertirsi e creare connessioni vere: scopri qualcosa di nuovo, ripeti ciò che ami e costruisci la tua community, un'attività alla volta.",
     items: [
       {
-        title: "Crea eventi",
-        text: "Pubblica la tua attività in pochi minuti, con date, posti e dettagli.",
-        emoji: "✨",
+        title: "Scoperta autentica",
+        text: "Mettiamo in luce attività ed esperienze reali, comprese quelle di piccole realtà locali ancora poco conosciute.",
+        emoji: "🔎",
       },
       {
-        title: "Costruisci una community",
-        text: "Trasforma i partecipanti in una community che torna, settimana dopo settimana.",
+        title: "Connessioni vere",
+        text: "Ogni attività è un'occasione per incontrare persone con interessi simili ai tuoi.",
+        emoji: "🤝",
+      },
+      {
+        title: "Crescita personale",
+        text: "Imparare qualcosa di nuovo o coltivare una passione: il tempo libero come spazio per crescere.",
         emoji: "🌱",
       },
       {
-        title: "Gestisci partecipanti",
-        text: "Iscrizioni, presenze e comunicazioni in un unico posto.",
-        emoji: "📋",
-      },
-      {
-        title: "Condividi passioni",
-        text: "Racconta quello che ami a persone davvero interessate.",
-        emoji: "❤️",
-      },
-      {
-        title: "Monetizza le tue attività",
-        text: "Imposta un prezzo per le tue esperienze e ricevi i pagamenti in modo semplice.",
-        emoji: "💶",
+        title: "Fiducia e community",
+        text: "Una piattaforma intuitiva e sicura, costruita insieme alla community che la usa.",
+        emoji: "💚",
       },
     ],
-    cta: "Voglio diventare host",
+  },
+  hosts: {
+    eyebrow: "In arrivo",
+    title: "Organizzi attività ed esperienze?",
+    sub: "Stiamo costruendo Freetime anche per chi organizza attività — specialmente piccole realtà locali che meritano più visibilità. Questa parte arriverà dopo il lancio: se ti interessa, faccelo sapere già da ora.",
+    items: [
+      {
+        title: "Più visibilità",
+        text: "Fatti scoprire da persone vicino a te interessate a quello che proponi.",
+        emoji: "✨",
+      },
+      {
+        title: "Una community che torna",
+        text: "Trasforma chi partecipa una volta in una community che torna.",
+        emoji: "🌱",
+      },
+      {
+        title: "Gestione semplice",
+        text: "Iscrizioni, presenze e comunicazioni in un unico posto (in arrivo).",
+        emoji: "📋",
+      },
+    ],
+    cta: "Avvisami quando è disponibile",
   },
   proof: {
     eyebrow: "La community cresce",
@@ -167,28 +190,28 @@ const it = {
     testimonials: [
       {
         quote:
-          "Mi sono trasferita a Roma da poco: con Freetime ho trovato un gruppo di escursionismo e nuove amicizie nel giro di due settimane.",
+          "Mi sono trasferita a Roma da poco: con Freetime ho scoperto un corso di ceramica vicino a casa che non avrei mai trovato da sola.",
         name: "Giulia M.",
         role: "Beta tester · Roma",
       },
       {
         quote:
-          "Insegno ceramica da anni. L'idea di avere iscrizioni, community e pagamenti in un'unica app è esattamente ciò che mi mancava.",
+          "Faccio aerial yoga da anni in un piccolo studio: con Freetime finalmente più persone della zona lo scoprono.",
         name: "Marco R.",
-        role: "Host · Torino",
+        role: "Beta tester · Roma",
       },
       {
         quote:
-          "Finalmente un social che ti porta fuori casa invece di tenerti incollato allo schermo.",
+          "Ho provato il padel, poi una degustazione di vino, poi un laboratorio di ceramica — ogni volta qualcosa di nuovo e persone nuove.",
         name: "Sara L.",
-        role: "Beta tester · Milano",
+        role: "Beta tester · Roma",
       },
     ],
     stats_note: "Obiettivi della community al lancio",
     stats: [
       { value: "500+", label: "iscritti in lista d'attesa" },
       { value: "12", label: "categorie di hobby" },
-      { value: "3", label: "città italiane al lancio" },
+      { value: "1", label: "città italiana al lancio: Roma" },
     ],
   },
   faq: {
@@ -197,19 +220,19 @@ const it = {
     items: [
       {
         q: "Cos'è Freetime?",
-        a: "Freetime è un social marketplace per hobby ed esperienze: un'app dove scopri attività vicino a te, partecipi a eventi e incontri persone che condividono i tuoi interessi. È sia un luogo dove trovare cose da fare, sia un social network per la vita reale.",
+        a: "Freetime è l'app per scoprire hobby ed esperienze vicino a te — comprese piccole realtà locali ancora poco conosciute — partecipare ad attività ed eventi, e incontrare persone che condividono i tuoi interessi. È un luogo per trovare cose nuove da fare e per costruire una community attorno alle tue passioni.",
       },
       {
         q: "Quando verrà lanciato?",
-        a: "Stiamo lavorando al lancio in Italia. Gli iscritti alla lista d'attesa riceveranno l'accesso anticipato e tutti gli aggiornamenti in anteprima.",
+        a: "Stiamo lavorando al lancio a Roma. Gli iscritti alla lista d'attesa riceveranno l'accesso anticipato e tutti gli aggiornamenti in anteprima.",
       },
       {
         q: "È gratuito?",
-        a: "Sì: scaricare Freetime, esplorare hobby e unirti alle community sarà gratuito. Alcune attività organizzate dagli host potranno avere un costo di partecipazione, sempre indicato in modo chiaro.",
+        a: "Sì: scaricare Freetime, esplorare hobby ed esperienze e unirti alle community sarà gratuito. Alcune attività potranno avere un costo di partecipazione stabilito da chi le organizza, sempre indicato in modo chiaro.",
       },
       {
-        q: "Posso creare le mie attività?",
-        a: "Assolutamente sì. Chiunque potrà diventare host: creare eventi, gestire i partecipanti, costruire una community e, se vorrai, monetizzare le tue esperienze.",
+        q: "Posso proporre le mie attività su Freetime?",
+        a: "È nei nostri piani: dopo il lancio vogliamo aprire Freetime anche a chi organizza attività, specialmente piccole realtà locali che meritano più visibilità. Se ti interessa, scrivici e sarai tra i primi a saperlo.",
       },
       {
         q: "Come funziona la lista d'attesa?",
@@ -218,7 +241,7 @@ const it = {
     ],
   },
   finalCta: {
-    title: "Pronto a trasformare il tuo tempo libero?",
+    title: "Pronto a scoprire cosa c'è vicino a te?",
     text: "Unisciti alla lista d'attesa e scopri Freetime prima di tutti.",
     cta: "Unisciti alla lista d'attesa",
   },
@@ -238,7 +261,7 @@ const it = {
     close: "Chiudi",
   },
   footer: {
-    tagline: "Hobby, esperienze e persone — nella tua città.",
+    tagline: "Hobby, esperienze e persone — vicino a te.",
     made: "Fatto con ❤️ in Italia",
     rights: "Tutti i diritti riservati.",
     contact: "Contatti",
@@ -252,15 +275,16 @@ const en: typeof it = {
     hobbies: "Hobbies",
     how: "How it works",
     social: "Community",
-    hosts: "For creators",
+    values: "Mission",
+    hosts: "For activities",
     faq: "FAQ",
     cta: "Join waitlist",
   },
   hero: {
-    eyebrow: "Your best self starts in your free time",
-    headline_1: "Turn your free time",
-    headline_2: "into new passions.",
-    sub: "Discover hobbies, join activities and meet people who share your interests.",
+    eyebrow: "Coming soon to Rome",
+    headline_1: "Discover what to do",
+    headline_2: "near you.",
+    sub: "Find hobbies and experiences — including small local gems you don't know yet — join in, meet people, and come back any time you want to try something new.",
     note: "Join the waitlist and be among the first to try Freetime.",
     cta_primary: "Join the waitlist",
     cta_secondary: "Learn more",
@@ -272,18 +296,18 @@ const en: typeof it = {
   hobbies: {
     eyebrow: "For every passion",
     title: "There's a hobby waiting for you",
-    sub: "From lifelong passions to ones you don't know you have yet. New activities near you, every week.",
+    sub: "From lifelong passions to ones you don't know you have yet. New activities near you every week — including small local spots still under the radar.",
     items: [
       { name: "Photography", emoji: "📷" },
       { name: "Hiking", emoji: "🥾" },
       { name: "Cooking", emoji: "🍝" },
       { name: "Tennis & Padel", emoji: "🎾" },
-      { name: "Football", emoji: "⚽" },
+      { name: "Horseback riding", emoji: "🐴" },
       { name: "Art & Ceramics", emoji: "🎨" },
       { name: "Music", emoji: "🎸" },
-      { name: "Chess", emoji: "♟️" },
-      { name: "Fitness & Yoga", emoji: "🧘" },
-      { name: "Gaming", emoji: "🎮" },
+      { name: "Wellness & Yoga", emoji: "🧘" },
+      { name: "Tastings", emoji: "🍷" },
+      { name: "Crafts", emoji: "💍" },
       { name: "Dance", emoji: "💃" },
       { name: "Languages", emoji: "🗣️" },
     ],
@@ -291,39 +315,39 @@ const en: typeof it = {
   },
   how: {
     eyebrow: "How it works",
-    title: "Four steps to your next passion",
+    title: "Discover, join, repeat (or switch it up)",
     steps: [
       {
-        title: "Discover new hobbies",
-        text: "Explore activities and experiences near you, matched to your interests.",
+        title: "Discover what's near you",
+        text: "Explore hobbies and experiences in your area, including small local gems worth knowing.",
       },
       {
-        title: "Find people who share your interests",
-        text: "Profiles and communities help you meet people who love what you love.",
+        title: "Pick one and join",
+        text: "Found something that catches your eye? Book your spot in a few taps.",
       },
       {
-        title: "Join activities and events",
-        text: "Book your spot in a few taps and live the experience in real life.",
+        title: "Meet people like you",
+        text: "Every activity is a chance to meet people who share your interests.",
       },
       {
-        title: "Build your community",
-        text: "Stay in touch, create groups and turn one meetup into a habit.",
+        title: "Come back or try something new",
+        text: "Loved it? Come back and become part of the community. Want more? There's always something new to try.",
       },
     ],
   },
   social: {
-    eyebrow: "Much more than a marketplace",
+    eyebrow: "Much more than a listings app",
     title: "A social network for real life",
-    sub: "Freetime combines experience discovery with a real community: every activity is a chance to meet people.",
+    sub: "Freetime combines discovering experiences near you with a real community: every activity is a chance to meet people, learn something, and share the moment.",
     features: [
       {
         title: "Personal profiles",
-        text: "Show who you are through your passions, not just your photos.",
+        text: "Show who you are through the hobbies and activities you love.",
         emoji: "👤",
       },
       {
         title: "Follow other users",
-        text: "Stay up to date with the activities of people who inspire you.",
+        text: "Stay in touch with the people you meet at activities.",
         emoji: "➕",
       },
       {
@@ -342,9 +366,9 @@ const en: typeof it = {
         emoji: "💬",
       },
       {
-        title: "Local events",
-        text: "From pottery classes to padel tournaments: all in your city.",
-        emoji: "🗓️",
+        title: "Share the moment",
+        text: "Tell others about your experiences and inspire them to try too.",
+        emoji: "✨",
       },
     ],
     phone: {
@@ -353,43 +377,65 @@ const en: typeof it = {
       card1_meta: "Sat 3:00 PM · Trastevere · 4 spots",
       card2_title: "Padel — beginner level",
       card2_meta: "Sun 10:30 AM · EUR · 2 spots",
-      card3_title: "Language aperitivo 🇮🇹🇬🇧🇪🇸",
-      card3_meta: "Thu 7:00 PM · Monti · 12 spots",
+      card3_title: "Aerial yoga",
+      card3_meta: "Tue 6:30 PM · Monti · 6 spots",
       join: "Join",
     },
   },
-  hosts: {
-    eyebrow: "For hosts & creators",
-    title: "Share your passion. Turn it into something more.",
-    sub: "On Freetime anyone can organise activities: from yoga teachers to photographers, from chess lovers to sommeliers.",
+  values: {
+    eyebrow: "Values & mission",
+    title: "Why Freetime exists",
+    mission_label: "Our mission",
+    mission:
+      "Make it easy to discover and enjoy valuable experiences near you — giving visibility to small local gems that deserve to be known — through a trustworthy, intuitive, people-first platform.",
+    vision_label: "What we want to build",
+    vision:
+      "A place where free time becomes a chance to grow, have fun and build real connections: discover something new, come back to what you love, and build your community one activity at a time.",
     items: [
       {
-        title: "Create events",
-        text: "Publish your activity in minutes, with dates, spots and details.",
-        emoji: "✨",
+        title: "Authentic discovery",
+        text: "We highlight real activities and experiences, including small local spots still under the radar.",
+        emoji: "🔎",
       },
       {
-        title: "Build a community",
-        text: "Turn participants into a community that comes back, week after week.",
+        title: "Real connections",
+        text: "Every activity is a chance to meet people with interests like yours.",
+        emoji: "🤝",
+      },
+      {
+        title: "Personal growth",
+        text: "Learning something new or nurturing a passion: free time as a space to grow.",
         emoji: "🌱",
       },
       {
-        title: "Manage participants",
-        text: "Sign-ups, attendance and communication, all in one place.",
-        emoji: "📋",
-      },
-      {
-        title: "Share your passions",
-        text: "Tell people who truly care about what you love.",
-        emoji: "❤️",
-      },
-      {
-        title: "Monetise your activities",
-        text: "Set a price for your experiences and get paid the easy way.",
-        emoji: "💶",
+        title: "Trust & community",
+        text: "An intuitive, safe platform, built together with the community that uses it.",
+        emoji: "💚",
       },
     ],
-    cta: "I want to become a host",
+  },
+  hosts: {
+    eyebrow: "Coming soon",
+    title: "Do you organise activities or experiences?",
+    sub: "We're building Freetime for organisers too — especially small local spots that deserve more visibility. This part is coming after launch: if you're interested, let us know now.",
+    items: [
+      {
+        title: "More visibility",
+        text: "Get discovered by people near you who are interested in what you offer.",
+        emoji: "✨",
+      },
+      {
+        title: "A community that comes back",
+        text: "Turn first-time participants into a community that returns.",
+        emoji: "🌱",
+      },
+      {
+        title: "Simple management",
+        text: "Sign-ups, attendance and communication in one place (coming soon).",
+        emoji: "📋",
+      },
+    ],
+    cta: "Notify me when it's available",
   },
   proof: {
     eyebrow: "The community is growing",
@@ -397,28 +443,28 @@ const en: typeof it = {
     testimonials: [
       {
         quote:
-          "I recently moved to Rome: with Freetime I found a hiking group and new friends within two weeks.",
+          "I recently moved to Rome: with Freetime I discovered a pottery class near home I'd never have found on my own.",
         name: "Giulia M.",
         role: "Beta tester · Rome",
       },
       {
         quote:
-          "I've been teaching ceramics for years. Having sign-ups, community and payments in one app is exactly what I was missing.",
+          "I've run a small aerial yoga studio for years: with Freetime more people in the area are finally discovering it.",
         name: "Marco R.",
-        role: "Host · Turin",
+        role: "Beta tester · Rome",
       },
       {
         quote:
-          "Finally a social network that gets you out of the house instead of glueing you to a screen.",
+          "I tried padel, then a wine tasting, then a pottery workshop — every time something new and new people too.",
         name: "Sara L.",
-        role: "Beta tester · Milan",
+        role: "Beta tester · Rome",
       },
     ],
     stats_note: "Community goals at launch",
     stats: [
       { value: "500+", label: "waitlist members" },
       { value: "12", label: "hobby categories" },
-      { value: "3", label: "Italian launch cities" },
+      { value: "1", label: "launch city: Rome" },
     ],
   },
   faq: {
@@ -427,19 +473,19 @@ const en: typeof it = {
     items: [
       {
         q: "What is Freetime?",
-        a: "Freetime is a social marketplace for hobbies and experiences: an app where you discover activities near you, join events and meet people who share your interests. It's both a place to find things to do and a social network for real life.",
+        a: "Freetime is the app for discovering hobbies and experiences near you — including small local gems still under the radar — joining activities and events, and meeting people who share your interests. It's a place to find new things to do and build a community around your passions.",
       },
       {
         q: "When will it launch?",
-        a: "We're working on the launch in Italy. Waitlist members will get early access and all updates first.",
+        a: "We're working on the launch in Rome. Waitlist members will get early access and all updates first.",
       },
       {
         q: "Is it free?",
-        a: "Yes: downloading Freetime, exploring hobbies and joining communities will be free. Some activities organised by hosts may have a participation fee, always clearly shown.",
+        a: "Yes: downloading Freetime, exploring hobbies and experiences, and joining communities will be free. Some activities may have a participation fee set by the organiser, always clearly shown.",
       },
       {
-        q: "Can I create my own activities?",
-        a: "Absolutely. Anyone will be able to become a host: create events, manage participants, build a community and, if you want, monetise your experiences.",
+        q: "Can I list my own activities on Freetime?",
+        a: "It's on our roadmap: after launch we want to open Freetime to organisers too, especially small local spots that deserve more visibility. If you're interested, get in touch and you'll be among the first to know.",
       },
       {
         q: "How does the waitlist work?",
@@ -448,7 +494,7 @@ const en: typeof it = {
     ],
   },
   finalCta: {
-    title: "Ready to transform your free time?",
+    title: "Ready to discover what's near you?",
     text: "Join the waitlist and discover Freetime before anyone else.",
     cta: "Join the waitlist",
   },
@@ -468,7 +514,7 @@ const en: typeof it = {
     close: "Close",
   },
   footer: {
-    tagline: "Hobbies, experiences and people — in your city.",
+    tagline: "Hobbies, experiences and people — near you.",
     made: "Made with ❤️ in Italy",
     rights: "All rights reserved.",
     contact: "Contact",

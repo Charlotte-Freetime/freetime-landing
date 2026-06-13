@@ -5,21 +5,18 @@ import { useLanguage } from "@/lib/language";
 import { useWaitlist } from "@/lib/waitlist-context";
 
 // ---------------------------------------------------------------------------
-// 📷 IMAGES — these Unsplash photos echo the activities of the original site
-// (padel, ceramics, hiking, wine, yoga). To use your own photos, drop files
-// in /public/images and replace the `src` values with e.g. "/images/padel.jpg".
+// 📷 IMAGES — real Freetime photos, stored in /public/images.
+// To swap any of these later, just replace the file (same name) or update
+// the path below.
 // ---------------------------------------------------------------------------
 const photos = {
-  ceramics:
-    "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=800&q=70",
-  padel:
-    "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=800&q=70",
-  hiking:
-    "https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=800&q=70",
-  wine: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=800&q=70",
-  friends:
-    "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=70",
-  yoga: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=70",
+  ceramica: "/images/ceramica.jpg",
+  padel: "/images/padel.jpg",
+  cavalli: "/images/cavalli.jpg",
+  vino: "/images/vino.jpg",
+  yoga: "/images/yoga.jpg",
+  gioielli: "/images/gioielli.jpg",
+  erbe: "/images/erbe.jpg",
 };
 
 function WordTile({
@@ -80,7 +77,7 @@ export default function Hero() {
         <div className="text-center lg:text-left">
           <p className="inline-flex items-center gap-2 rounded-full border border-forest/15 bg-forest-soft px-4 py-1.5 text-sm font-semibold text-forest">
             <span className="h-2 w-2 animate-pulse rounded-full bg-forest" aria-hidden="true" />
-            {t.hero.badge_soon}
+            {t.hero.eyebrow}
           </p>
 
           <h1 className="mt-5 font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-ink sm:text-5xl lg:text-6xl">
@@ -127,17 +124,18 @@ export default function Hero() {
         </div>
 
         {/* --- Signature mosaic: Scopri · Connetti · Cresci -------------- */}
-        {/* Evolved from the strongest section of the original site.        */}
+        {/* Evolved from the strongest section of the original site, now    */}
+        {/* using real Freetime photos.                                     */}
         <div className="mx-auto grid w-full max-w-md grid-cols-3 gap-3 lg:max-w-none">
           <div className="flex flex-col gap-3">
             <WordTile word={t.hero.mosaic_discover} className="h-24 bg-terracotta sm:h-28" />
             <PhotoTile
-              src={photos.ceramics}
+              src={photos.ceramica}
               alt="Laboratorio di ceramica"
               className="h-40 animate-floaty sm:h-48"
               priority
             />
-            <PhotoTile src={photos.wine} alt="Degustazione in vigna" className="h-28 sm:h-32" />
+            <PhotoTile src={photos.vino} alt="Degustazione di vino in vigna" className="h-28 sm:h-32" />
           </div>
           <div className="mt-6 flex flex-col gap-3">
             <PhotoTile
@@ -148,16 +146,16 @@ export default function Hero() {
             />
             <WordTile word={t.hero.mosaic_connect} className="h-24 bg-forest sm:h-28" />
             <PhotoTile
-              src={photos.friends}
-              alt="Amici a un evento"
+              src={photos.gioielli}
+              alt="Laboratorio di gioielli artigianali"
               className="h-36 animate-floaty [animation-delay:1.5s] sm:h-44"
             />
           </div>
           <div className="flex flex-col gap-3">
-            <PhotoTile src={photos.hiking} alt="Escursione in montagna" className="h-36 sm:h-44" />
+            <PhotoTile src={photos.cavalli} alt="Passeggiata a cavallo al tramonto" className="h-36 sm:h-44" />
             <PhotoTile
               src={photos.yoga}
-              alt="Lezione di yoga"
+              alt="Aerial yoga in studio"
               className="h-28 animate-floaty [animation-delay:3s] sm:h-32"
             />
             <WordTile word={t.hero.mosaic_evolve} className="h-24 bg-saffron-deep sm:h-28" />

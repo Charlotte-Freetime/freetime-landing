@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { useLanguage } from "@/lib/language";
 import { useWaitlist } from "@/lib/waitlist-context";
 import { locales } from "@/lib/dictionaries";
@@ -8,15 +9,14 @@ import { locales } from "@/lib/dictionaries";
 function Logo() {
   return (
     <a href="#top" className="flex items-center gap-2" aria-label="Freetime — home">
-      {/* Location-pin mark, inherited from the original Freetime logo */}
-      <span className="relative flex h-9 w-9 items-center justify-center rounded-full bg-lagoon text-white shadow-md shadow-lagoon/30">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path
-            d="M12 21s-7-5.1-7-11a7 7 0 1114 0c0 5.9-7 11-7 11z"
-            fill="currentColor"
-          />
-          <circle cx="12" cy="10" r="2.6" fill="#E8A33D" />
-        </svg>
+      <span className="relative h-9 w-9 shrink-0">
+        <Image
+          src="/images/freetime-pin.png"
+          alt=""
+          fill
+          className="object-contain"
+          priority
+        />
       </span>
       <span className="font-display text-xl font-extrabold tracking-tight text-ink">
         Freetime
@@ -101,7 +101,7 @@ export default function Navbar() {
     { href: "#hobby", label: t.nav.hobbies },
     { href: "#come-funziona", label: t.nav.how },
     { href: "#community", label: t.nav.social },
-    { href: "#creator", label: t.nav.hosts },
+    { href: "#missione", label: t.nav.values },
     { href: "#faq", label: t.nav.faq },
   ];
 

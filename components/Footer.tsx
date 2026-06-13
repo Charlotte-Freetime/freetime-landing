@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useLanguage } from "@/lib/language";
 
 export default function Footer() {
@@ -10,8 +11,15 @@ export default function Footer() {
     <footer className="border-t border-ink/5 bg-white/60">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-3">
         <div>
-          <p className="font-display text-xl font-extrabold text-ink">Freetime</p>
-          <p className="mt-2 max-w-xs text-sm text-ink/60">{t.footer.tagline}</p>
+          <div className="relative h-9 w-36">
+            <Image
+              src="/images/freetime-logo-full.png"
+              alt="Freetime"
+              fill
+              className="object-contain object-left"
+            />
+          </div>
+          <p className="mt-3 max-w-xs text-sm text-ink/60">{t.footer.tagline}</p>
           <p className="mt-4 text-sm text-ink/50">{t.footer.made}</p>
         </div>
 
@@ -37,10 +45,9 @@ export default function Footer() {
             {t.footer.follow}
           </p>
           <ul className="mt-3 flex gap-3">
-            {/* ↓ Update with your real profile URLs */}
             <li>
               <a
-                href="https://instagram.com/"
+                href="https://www.instagram.com/official.freetimeapp?igsh=MXMzMjAyd3d6ZHhxZA=="
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -55,27 +62,20 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="https://www.linkedin.com/"
+                href="https://linktr.ee/FreeTime_official?utm_source=linktree_profile_share&ltsid=1c70b959-232a-4c6e-8d67-b9681dd77ce8"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="LinkedIn"
+                aria-label="Linktree"
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-cream text-ink/70 transition hover:bg-saffron-soft hover:text-ink"
               >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.5c0-1.3-.02-3-1.83-3-1.84 0-2.12 1.43-2.12 2.9V21H9z" />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://facebook.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-cream text-ink/70 transition hover:bg-saffron-soft hover:text-ink"
-              >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.25-1.5 1.55-1.5h1.35V4.9c-.25-.03-1.1-.1-2.1-.1-2.1 0-3.5 1.3-3.5 3.6V11H8.5v3h2.3v7h2.7z" />
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path
+                    d="M12 2v20M12 6L6 2M12 6l6-4M12 12L5 7M12 12l7-5M12 18l-4-3M12 18l4-3"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
                 </svg>
               </a>
             </li>
