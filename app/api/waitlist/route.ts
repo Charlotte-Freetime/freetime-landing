@@ -27,7 +27,10 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: "invalid_email" }, { status: 400 });
   }
 
-  const web3forms = process.env.WAITLIST_WEB3FORMS_KEY;
+  // Web3Forms public access key. Falls back to the hardcoded key if the
+  // Vercel env var isn't picked up. This key is public by design.
+  const web3forms =
+    process.env.WAITLIST_WEB3FORMS_KEY || "5ebfa436-2cf9-4237-b1b5-916317a50b40";
 
   if (!web3forms) {
     console.log(`[waitlist] new signup (no provider configured): ${email}`);
@@ -35,36 +38,37 @@ export async function POST(request: Request) {
   }
 
   try {
-    // 1) Notification to YOU + automatic welcome reply to the user.
-    //    Web3Forms sends the auto-reply when you include the special
-    //    fields below: from_name, replyto and a custom autoresponder.
-    await fetch("https://api.web3forms.com/submit", {
+    // Notification to YOU + automatic welcome reply to the user.
+    const res = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       headers: { "Content-Type": "application/json", Accept: "application/json" },
       body: JSON.stringify({
         access_key: web3forms,
         subject: "Nuova iscrizione lista d'attesa Freetime 🎉",
-        from_name: "Freetime",
-        email, // the user's email → used as reply-to
+        from_name: "Freetime Waitlist",
+        email,
         source: "freetime-landing",
         message: `Nuova iscrizione alla lista d'attesa: ${email}`,
-
-        // Automatic confirmation email sent to the user:
-        autoresponse: {
-          subject: "Benvenuto in Freetime! 🎉",
-          message: `Ciao!
+        // Automatic confirmation email sent back to the user:
+        autoresponder_subject: "Benvenuto in Freetime! 🎉",
+        autoresponder_message: `Ciao!
 
 Grazie per esserti iscritto alla lista d'attesa di Freetime 💚
 
-Sei ufficialmente tra i primi a scoprire la nuova app per vivere hobby ed esperienze a Roma. Ti scriveremo appena saremo pronti al lancio — sarai tra i primi ad avere accesso.
+Sei tra i primi a scoprire la nuova app per vivere hobby ed esperienze a Roma. Ti scriveremo appena saremo pronti al lancio.
 
-Nel frattempo seguici su Instagram per restare aggiornato: @official.freetimeapp
+Nel frattempo seguici su Instagram: @official.freetimeapp
 
 A presto,
 Il team di Freetime`,
-        },
       }),
     });
+
+    const result = await res.json().catch(() => null);
+    if (!res.ok || !result?.success) {
+      console.error("[waitlist] web3forms rejected:", result);
+      return NextResponse.json({ ok: false, error: "provider_error" }, { status: 502 });
+    }
   } catch (err) {
     console.error("[waitlist] forwarding failed:", err);
     return NextResponse.json({ ok: false, error: "provider_error" }, { status: 502 });
