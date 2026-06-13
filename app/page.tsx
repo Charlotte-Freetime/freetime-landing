@@ -7,7 +7,7 @@ import Hero from "@/components/Hero";
 import Hobbies from "@/components/Hobbies";
 import HowItWorks from "@/components/HowItWorks";
 import SocialFeatures from "@/components/SocialFeatures";
-import Hosts from "@/components/Hosts";
+import Values from "@/components/Values";
 import SocialProof from "@/components/SocialProof";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
@@ -25,7 +25,7 @@ export default function Home() {
           <Hobbies />
           <HowItWorks />
           <SocialFeatures />
-          <Hosts />
+          <Values />
           <SocialProof />
           <FAQ />
           <FinalCTA />
