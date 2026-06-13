@@ -24,8 +24,8 @@ export default function Values() {
           <Reveal className="order-2 lg:order-1">
             <div className="relative h-[360px] overflow-hidden rounded-4xl shadow-xl sm:h-[440px]">
               <Image
-                src="/images/erbe.jpg"
-                alt="Preparazione artigianale di prodotti naturali"
+                src="/images/colosseo-freetime.jpg"
+                alt="Freetime Hobby Marketplace Roma"
                 fill
                 sizes="(max-width: 1024px) 100vw, 600px"
                 className="object-cover"
@@ -64,7 +64,7 @@ export default function Values() {
             <Reveal key={item.title} delay={i * 70}>
               <div className="flex h-full flex-col rounded-3xl bg-white/70 p-6 shadow-sm">
                 <span
-                  className="font-display text-2xl font-light italic text-terracotta"
+                  className="font-display text-2xl font-medium text-terracotta"
                   aria-hidden="true"
                 >
                   {String(i + 1).padStart(2, "0")}

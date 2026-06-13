@@ -28,7 +28,7 @@ function WordTile({
 }) {
   return (
     <div
-      className={`flex items-center justify-center rounded-3xl p-4 font-display text-2xl font-light italic text-white shadow-lg sm:text-3xl ${className}`}
+      className={`flex items-center justify-center rounded-3xl p-4 font-display text-xl font-semibold uppercase tracking-[0.12em] text-white shadow-lg sm:text-2xl ${className}`}
     >
       {word}
     </div>
