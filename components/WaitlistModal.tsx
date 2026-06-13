@@ -60,12 +60,9 @@ export default function WaitlistModal() {
           </svg>
         </button>
 
-        <div className="mb-1 text-3xl" aria-hidden="true">
-          🎟️
-        </div>
         <h2
           id="waitlist-modal-title"
-          className="font-display text-2xl font-extrabold tracking-tight text-ink"
+          className="font-display text-2xl font-medium tracking-tight text-ink"
         >
           {t.waitlist.modal_title}
         </h2>

@@ -28,7 +28,7 @@ function WordTile({
 }) {
   return (
     <div
-      className={`flex items-center justify-center rounded-3xl p-4 font-display text-xl font-extrabold text-white shadow-lg sm:text-2xl ${className}`}
+      className={`flex items-center justify-center rounded-3xl p-4 font-display text-2xl font-light italic text-white shadow-lg sm:text-3xl ${className}`}
     >
       {word}
     </div>
@@ -75,14 +75,14 @@ export default function Hero() {
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-[1.05fr_0.95fr]">
         {/* --- Copy ---------------------------------------------------- */}
         <div className="text-center lg:text-left">
-          <p className="inline-flex items-center gap-2 rounded-full border border-forest/15 bg-forest-soft px-4 py-1.5 text-sm font-semibold text-forest">
-            <span className="h-2 w-2 animate-pulse rounded-full bg-forest" aria-hidden="true" />
+          <p className="inline-flex items-center gap-2 rounded-full border border-forest/15 bg-forest-soft px-4 py-1.5 text-sm font-medium text-forest">
+            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-forest" aria-hidden="true" />
             {t.hero.eyebrow}
           </p>
 
-          <h1 className="mt-5 font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-ink sm:text-5xl lg:text-6xl">
+          <h1 className="mt-6 font-display text-5xl font-light leading-[1.04] tracking-tight text-ink sm:text-6xl lg:text-7xl">
             {t.hero.headline_1}{" "}
-            <span className="relative inline-block text-forest">
+            <span className="relative inline-block italic text-forest">
               {t.hero.headline_2}
               <svg
                 className="absolute -bottom-2 left-0 w-full text-saffron"
@@ -93,7 +93,7 @@ export default function Hero() {
                 <path
                   d="M2 7c40-5 120-7 196-2"
                   stroke="currentColor"
-                  strokeWidth="4"
+                  strokeWidth="3"
                   strokeLinecap="round"
                   fill="none"
                 />
@@ -105,16 +105,16 @@ export default function Hero() {
             {t.hero.sub}
           </p>
 
-          <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
+          <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
             <button
               onClick={open}
-              className="w-full rounded-full bg-terracotta px-7 py-4 font-display text-base font-bold text-white shadow-xl shadow-terracotta/30 transition hover:-translate-y-0.5 hover:bg-[#a93f21] sm:w-auto"
+              className="w-full rounded-full bg-terracotta px-8 py-4 font-display text-base font-medium text-white shadow-lg shadow-terracotta/25 transition hover:-translate-y-0.5 hover:bg-[#a93f21] sm:w-auto"
             >
               {t.hero.cta_primary}
             </button>
             <a
               href="#come-funziona"
-              className="w-full rounded-full border-2 border-ink/15 bg-white/60 px-7 py-[14px] text-center font-display text-base font-bold text-ink transition hover:border-ink/30 hover:bg-white sm:w-auto"
+              className="w-full rounded-full border border-ink/20 px-8 py-[15px] text-center font-display text-base font-medium text-ink transition hover:border-ink/40 hover:bg-white/50 sm:w-auto"
             >
               {t.hero.cta_secondary}
             </a>

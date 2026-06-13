@@ -1,13 +1,17 @@
 import type { Metadata, Viewport } from "next";
-import { Bricolage_Grotesque, Figtree } from "next/font/google";
+import { Fraunces, Figtree } from "next/font/google";
 import "./globals.css";
 
-const display = Bricolage_Grotesque({
+// Fraunces: a characterful "old-style" serif with optical sizing — warm,
+// editorial, a touch of luxury. Used for display headings.
+const display = Fraunces({
   subsets: ["latin", "latin-ext"],
   variable: "--font-display",
   display: "swap",
+  axes: ["opsz", "SOFT"],
 });
 
+// Figtree: clean, friendly grotesque for body and UI text.
 const body = Figtree({
   subsets: ["latin", "latin-ext"],
   variable: "--font-body",
@@ -17,7 +21,7 @@ const body = Figtree({
 // ---------------------------------------------------------------------------
 // SEO — update `metadataBase` with your real domain after connecting it.
 // ---------------------------------------------------------------------------
-const SITE_URL = "https://www.freetimeapp.it"; // ← replace with your domain
+const SITE_URL = "https://freetime-app.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

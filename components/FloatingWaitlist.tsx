@@ -31,7 +31,10 @@ export default function FloatingWaitlist() {
           : "pointer-events-none translate-y-4 opacity-0"
       }`}
     >
-      <span aria-hidden="true">✉️</span>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" strokeWidth="2" />
+        <path d="M4 7l8 6 8-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+      </svg>
       {t.waitlist.floating}
     </button>
   );

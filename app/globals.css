@@ -12,6 +12,13 @@ html {
 
 body {
   @apply bg-cream text-ink font-body antialiased;
+  font-feature-settings: "ss01", "cv01";
+}
+
+/* Display headings use Fraunces with a softer, lighter optical feel */
+.font-display {
+  font-optical-sizing: auto;
+  letter-spacing: -0.01em;
 }
 
 ::selection {

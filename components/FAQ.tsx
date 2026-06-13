@@ -11,10 +11,10 @@ export default function FAQ() {
   return (
     <section id="faq" className="mx-auto max-w-3xl scroll-mt-20 px-4 py-20 sm:px-6">
       <Reveal className="text-center">
-        <p className="font-display text-sm font-bold uppercase tracking-widest text-terracotta">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-terracotta">
           {t.faq.eyebrow}
         </p>
-        <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
+        <h2 className="mt-3 font-display text-4xl font-light tracking-tight text-ink sm:text-5xl">
           {t.faq.title}
         </h2>
       </Reveal>
@@ -31,7 +31,7 @@ export default function FAQ() {
                   aria-controls={`faq-panel-${i}`}
                   className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
                 >
-                  <span className="font-display text-base font-bold text-ink">
+                  <span className="font-display text-lg font-medium text-ink">
                     {item.q}
                   </span>
                   <span

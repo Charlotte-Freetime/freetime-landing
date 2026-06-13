@@ -18,7 +18,7 @@ function Logo() {
           priority
         />
       </span>
-      <span className="font-display text-xl font-extrabold tracking-tight text-ink">
+      <span className="font-display text-2xl font-medium tracking-tight text-ink">
         Freetime
       </span>
     </a>
@@ -134,7 +134,7 @@ export default function Navbar() {
           <LanguageSwitcher />
           <button
             onClick={open}
-            className="hidden rounded-full bg-terracotta px-4 py-2 font-display text-sm font-bold text-white shadow-md shadow-terracotta/25 transition hover:-translate-y-0.5 hover:bg-[#a93f21] sm:block"
+            className="hidden rounded-full bg-terracotta px-4 py-2 font-display text-sm font-medium text-white shadow-md shadow-terracotta/25 transition hover:-translate-y-0.5 hover:bg-[#a93f21] sm:block"
           >
             {t.nav.cta}
           </button>
@@ -178,7 +178,7 @@ export default function Navbar() {
               setMenuOpen(false);
               open();
             }}
-            className="mt-2 w-full rounded-full bg-terracotta px-4 py-3 font-display font-bold text-white shadow-md shadow-terracotta/25"
+            className="mt-2 w-full rounded-full bg-terracotta px-4 py-3 font-display font-medium text-white shadow-md shadow-terracotta/25"
           >
             {t.nav.cta}
           </button>

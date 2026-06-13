@@ -11,10 +11,10 @@ export default function SocialProof() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
       <Reveal className="mx-auto max-w-2xl text-center">
-        <p className="font-display text-sm font-bold uppercase tracking-widest text-forest">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-forest">
           {t.proof.eyebrow}
         </p>
-        <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
+        <h2 className="mt-3 font-display text-4xl font-light tracking-tight text-ink sm:text-5xl">
           {t.proof.title}
         </h2>
       </Reveal>
@@ -33,13 +33,13 @@ export default function SocialProof() {
               </blockquote>
               <figcaption className="mt-5 flex items-center gap-3">
                 <span
-                  className={`flex h-10 w-10 items-center justify-center rounded-full font-display font-bold text-white ${avatarColors[i % avatarColors.length]}`}
+                  className={`flex h-10 w-10 items-center justify-center rounded-full font-display font-semibold text-white ${avatarColors[i % avatarColors.length]}`}
                   aria-hidden="true"
                 >
                   {tm.name.charAt(0)}
                 </span>
                 <div>
-                  <p className="font-display text-sm font-bold text-ink">{tm.name}</p>
+                  <p className="font-display text-sm font-semibold text-ink">{tm.name}</p>
                   <p className="text-xs text-ink/50">{tm.role}</p>
                 </div>
               </figcaption>
@@ -57,7 +57,7 @@ export default function SocialProof() {
           <div className="mt-6 grid gap-8 text-center sm:grid-cols-3">
             {t.proof.stats.map((s) => (
               <div key={s.label}>
-                <p className="font-display text-4xl font-extrabold text-ink sm:text-5xl">
+                <p className="font-display text-5xl font-light text-ink sm:text-6xl">
                   {s.value}
                 </p>
                 <p className="mt-1 text-sm font-semibold text-ink/60">{s.label}</p>

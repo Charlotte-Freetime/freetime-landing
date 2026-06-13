@@ -22,10 +22,7 @@ export default function FinalCTA() {
           />
 
           <div className="relative">
-            <p className="text-3xl" aria-hidden="true">
-              🚀
-            </p>
-            <h2 className="mt-4 font-display text-3xl font-extrabold tracking-tight sm:text-5xl">
+            <h2 className="mt-4 font-display text-4xl font-light tracking-tight sm:text-5xl">
               {t.finalCta.title}
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lg text-white/80">

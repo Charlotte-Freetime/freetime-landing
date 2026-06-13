@@ -1,9 +1,9 @@
 // ---------------------------------------------------------------------------
-// Freetime — multilingual dictionaries
+// Freetime - multilingual dictionaries
 // Italian is the default language. To add a new language (e.g. Spanish):
 //   1. Copy the `it` object, translate the values, name it `es`.
 //   2. Add it to the `dictionaries` export and to `locales` below.
-// That's it — the switcher in the navbar picks it up automatically.
+// That's it. The switcher in the navbar picks it up automatically.
 // ---------------------------------------------------------------------------
 
 export type Locale = "it" | "en";
@@ -29,7 +29,7 @@ const it = {
     eyebrow: "Presto a Roma",
     headline_1: "Scopri cosa fare",
     headline_2: "vicino a te.",
-    sub: "Trova hobby ed esperienze — anche piccole realtà che non conosci ancora — partecipa, incontra persone e torna ogni volta che vuoi vivere qualcosa di nuovo.",
+    sub: "Trova hobby ed esperienze vicino a te, anche piccole realtà che ancora non conosci. Partecipa, incontra persone e torna ogni volta che vuoi vivere qualcosa di nuovo.",
     note: "Unisciti alla lista d'attesa e sii tra i primi a provare Freetime.",
     cta_primary: "Unisciti alla lista d'attesa",
     cta_secondary: "Scopri di più",
@@ -41,22 +41,22 @@ const it = {
   hobbies: {
     eyebrow: "Per ogni passione",
     title: "C'è un hobby che ti aspetta",
-    sub: "Dalle passioni di sempre a quelle che non sai ancora di avere. Ogni settimana nuove attività vicino a te — anche da piccole realtà locali ancora poco conosciute.",
+    sub: "Dalle passioni di sempre a quelle che ancora non sai di avere. Ogni settimana nuove attività vicino a te, anche da piccole realtà locali tutte da scoprire.",
     items: [
-      { name: "Fotografia", emoji: "📷" },
-      { name: "Escursionismo", emoji: "🥾" },
-      { name: "Cucina", emoji: "🍝" },
-      { name: "Tennis & Padel", emoji: "🎾" },
-      { name: "Equitazione", emoji: "🐴" },
-      { name: "Arte & Ceramica", emoji: "🎨" },
-      { name: "Musica", emoji: "🎸" },
-      { name: "Benessere & Yoga", emoji: "🧘" },
-      { name: "Degustazioni", emoji: "🍷" },
-      { name: "Artigianato", emoji: "💍" },
-      { name: "Danza", emoji: "💃" },
-      { name: "Lingue", emoji: "🗣️" },
+      { name: "Ceramica", img: "/images/ceramica2.jpg" },
+      { name: "Escursionismo", img: "/images/escursionismo.jpg" },
+      { name: "Degustazioni", img: "/images/degustazioni.jpg" },
+      { name: "Tennis & Padel", img: "/images/padel.jpg" },
+      { name: "Ricamo", img: "/images/ricamo2.jpg" },
+      { name: "Danza", img: "/images/danza.jpg" },
+      { name: "Mosaico", img: "/images/mosaico.jpg" },
+      { name: "Equitazione", img: "/images/cavalli.jpg" },
+      { name: "Scrittura & Lettura", img: "/images/scrittura.jpg" },
+      { name: "Yoga & Benessere", img: "/images/yoga.jpg" },
+      { name: "Escape room", img: "/images/escaperoom.jpg" },
+      { name: "Artigianato", img: "/images/gioielli.jpg" },
     ],
-    more: "…e molti altri al lancio",
+    more: "E molte altre esperienze al lancio",
   },
   how: {
     eyebrow: "Come funziona",
@@ -120,7 +120,7 @@ const it = {
       app_title: "Freetime",
       card1_title: "Corso di ceramica",
       card1_meta: "Sab 15:00 · Trastevere · 4 posti",
-      card2_title: "Padel — livello base",
+      card2_title: "Padel, livello base",
       card2_meta: "Dom 10:30 · EUR · 2 posti",
       card3_title: "Aerial yoga",
       card3_meta: "Mar 18:30 · Monti · 6 posti",
@@ -132,7 +132,7 @@ const it = {
     title: "Perché esiste Freetime",
     mission_label: "La nostra missione",
     mission:
-      "Rendere semplice scoprire e vivere esperienze di valore vicino a te — dando visibilità anche alle piccole realtà locali che meritano di essere conosciute — attraverso una piattaforma affidabile, intuitiva e pensata per le persone.",
+      "Rendere semplice scoprire e vivere esperienze di valore vicino a te, dando visibilità anche alle piccole realtà locali che meritano di essere conosciute, attraverso una piattaforma affidabile, intuitiva e pensata per le persone.",
     vision_label: "Cosa vogliamo creare",
     vision:
       "Un luogo dove il tempo libero diventa un'occasione per crescere, divertirsi e creare connessioni vere: scopri qualcosa di nuovo, ripeti ciò che ami e costruisci la tua community, un'attività alla volta.",
@@ -162,7 +162,7 @@ const it = {
   hosts: {
     eyebrow: "In arrivo",
     title: "Organizzi attività ed esperienze?",
-    sub: "Stiamo costruendo Freetime anche per chi organizza attività — specialmente piccole realtà locali che meritano più visibilità. Questa parte arriverà dopo il lancio: se ti interessa, faccelo sapere già da ora.",
+    sub: "Stiamo costruendo Freetime anche per chi organizza attività, in particolare le piccole realtà locali che meritano più visibilità. Questa parte arriverà dopo il lancio: se ti interessa, faccelo sapere già da ora.",
     items: [
       {
         title: "Più visibilità",
@@ -185,7 +185,7 @@ const it = {
   proof: {
     eyebrow: "La community cresce",
     title: "Le prime voci di Freetime",
-    // ⚠️ PLACEHOLDER — sostituisci con testimonianze reali dei beta tester
+    // PLACEHOLDER: sostituisci con testimonianze reali dei beta tester
     // prima del lancio pubblico.
     testimonials: [
       {
@@ -202,7 +202,7 @@ const it = {
       },
       {
         quote:
-          "Ho provato il padel, poi una degustazione di vino, poi un laboratorio di ceramica — ogni volta qualcosa di nuovo e persone nuove.",
+          "Ho provato il padel, poi una degustazione di vino, poi un laboratorio di ceramica. Ogni volta qualcosa di nuovo e persone nuove.",
         name: "Sara L.",
         role: "Beta tester · Roma",
       },
@@ -220,7 +220,7 @@ const it = {
     items: [
       {
         q: "Cos'è Freetime?",
-        a: "Freetime è l'app per scoprire hobby ed esperienze vicino a te — comprese piccole realtà locali ancora poco conosciute — partecipare ad attività ed eventi, e incontrare persone che condividono i tuoi interessi. È un luogo per trovare cose nuove da fare e per costruire una community attorno alle tue passioni.",
+        a: "Freetime è l'app per scoprire hobby ed esperienze vicino a te, comprese piccole realtà locali ancora poco conosciute. Partecipa ad attività ed eventi e incontra persone che condividono i tuoi interessi: un luogo per trovare cose nuove da fare e costruire una community attorno alle tue passioni.",
       },
       {
         q: "Quando verrà lanciato?",
@@ -261,7 +261,7 @@ const it = {
     close: "Chiudi",
   },
   footer: {
-    tagline: "Hobby, esperienze e persone — vicino a te.",
+    tagline: "Hobby, esperienze e persone, vicino a te.",
     made: "Fatto con ❤️ in Italia",
     rights: "Tutti i diritti riservati.",
     contact: "Contatti",
@@ -269,7 +269,7 @@ const it = {
   },
 };
 
-// English dictionary — same structure as `it`.
+// English dictionary - same structure as `it`.
 const en: typeof it = {
   nav: {
     hobbies: "Hobbies",
@@ -284,7 +284,7 @@ const en: typeof it = {
     eyebrow: "Coming soon to Rome",
     headline_1: "Discover what to do",
     headline_2: "near you.",
-    sub: "Find hobbies and experiences — including small local gems you don't know yet — join in, meet people, and come back any time you want to try something new.",
+    sub: "Find hobbies and experiences near you, including small local gems you don't know yet. Join in, meet people, and come back any time you want to try something new.",
     note: "Join the waitlist and be among the first to try Freetime.",
     cta_primary: "Join the waitlist",
     cta_secondary: "Learn more",
@@ -296,22 +296,22 @@ const en: typeof it = {
   hobbies: {
     eyebrow: "For every passion",
     title: "There's a hobby waiting for you",
-    sub: "From lifelong passions to ones you don't know you have yet. New activities near you every week — including small local spots still under the radar.",
+    sub: "From lifelong passions to ones you don't know you have yet. New activities near you every week, including small local spots still to be discovered.",
     items: [
-      { name: "Photography", emoji: "📷" },
-      { name: "Hiking", emoji: "🥾" },
-      { name: "Cooking", emoji: "🍝" },
-      { name: "Tennis & Padel", emoji: "🎾" },
-      { name: "Horseback riding", emoji: "🐴" },
-      { name: "Art & Ceramics", emoji: "🎨" },
-      { name: "Music", emoji: "🎸" },
-      { name: "Wellness & Yoga", emoji: "🧘" },
-      { name: "Tastings", emoji: "🍷" },
-      { name: "Crafts", emoji: "💍" },
-      { name: "Dance", emoji: "💃" },
-      { name: "Languages", emoji: "🗣️" },
+      { name: "Ceramics", img: "/images/ceramica2.jpg" },
+      { name: "Hiking", img: "/images/escursionismo.jpg" },
+      { name: "Tastings", img: "/images/degustazioni.jpg" },
+      { name: "Tennis & Padel", img: "/images/padel.jpg" },
+      { name: "Embroidery", img: "/images/ricamo2.jpg" },
+      { name: "Dance", img: "/images/danza.jpg" },
+      { name: "Mosaic", img: "/images/mosaico.jpg" },
+      { name: "Horseback riding", img: "/images/cavalli.jpg" },
+      { name: "Reading & Writing", img: "/images/scrittura.jpg" },
+      { name: "Yoga & Wellness", img: "/images/yoga.jpg" },
+      { name: "Escape room", img: "/images/escaperoom.jpg" },
+      { name: "Crafts", img: "/images/gioielli.jpg" },
     ],
-    more: "…and many more at launch",
+    more: "And many more experiences at launch",
   },
   how: {
     eyebrow: "How it works",
@@ -375,7 +375,7 @@ const en: typeof it = {
       app_title: "Freetime",
       card1_title: "Pottery class",
       card1_meta: "Sat 3:00 PM · Trastevere · 4 spots",
-      card2_title: "Padel — beginner level",
+      card2_title: "Padel, beginner level",
       card2_meta: "Sun 10:30 AM · EUR · 2 spots",
       card3_title: "Aerial yoga",
       card3_meta: "Tue 6:30 PM · Monti · 6 spots",
@@ -387,7 +387,7 @@ const en: typeof it = {
     title: "Why Freetime exists",
     mission_label: "Our mission",
     mission:
-      "Make it easy to discover and enjoy valuable experiences near you — giving visibility to small local gems that deserve to be known — through a trustworthy, intuitive, people-first platform.",
+      "Make it easy to discover and enjoy valuable experiences near you, giving visibility to small local gems that deserve to be known, through a trustworthy, intuitive, people-first platform.",
     vision_label: "What we want to build",
     vision:
       "A place where free time becomes a chance to grow, have fun and build real connections: discover something new, come back to what you love, and build your community one activity at a time.",
@@ -417,7 +417,7 @@ const en: typeof it = {
   hosts: {
     eyebrow: "Coming soon",
     title: "Do you organise activities or experiences?",
-    sub: "We're building Freetime for organisers too — especially small local spots that deserve more visibility. This part is coming after launch: if you're interested, let us know now.",
+    sub: "We're building Freetime for organisers too, especially small local spots that deserve more visibility. This part is coming after launch: if you're interested, let us know now.",
     items: [
       {
         title: "More visibility",
@@ -455,7 +455,7 @@ const en: typeof it = {
       },
       {
         quote:
-          "I tried padel, then a wine tasting, then a pottery workshop — every time something new and new people too.",
+          "I tried padel, then a wine tasting, then a pottery workshop. Every time something new, and new people too.",
         name: "Sara L.",
         role: "Beta tester · Rome",
       },
@@ -473,7 +473,7 @@ const en: typeof it = {
     items: [
       {
         q: "What is Freetime?",
-        a: "Freetime is the app for discovering hobbies and experiences near you — including small local gems still under the radar — joining activities and events, and meeting people who share your interests. It's a place to find new things to do and build a community around your passions.",
+        a: "Freetime is the app for discovering hobbies and experiences near you, including small local gems still under the radar. Join activities and events and meet people who share your interests: a place to find new things to do and build a community around your passions.",
       },
       {
         q: "When will it launch?",
@@ -514,7 +514,7 @@ const en: typeof it = {
     close: "Close",
   },
   footer: {
-    tagline: "Hobbies, experiences and people — near you.",
+    tagline: "Hobbies, experiences and people, near you.",
     made: "Made with ❤️ in Italy",
     rights: "All rights reserved.",
     contact: "Contact",

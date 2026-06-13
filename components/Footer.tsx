@@ -24,7 +24,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="font-display text-sm font-bold uppercase tracking-widest text-ink/40">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-ink/40">
             {t.footer.contact}
           </p>
           <ul className="mt-3 space-y-2 text-sm text-ink/70">
@@ -41,7 +41,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="font-display text-sm font-bold uppercase tracking-widest text-ink/40">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-ink/40">
             {t.footer.follow}
           </p>
           <ul className="mt-3 flex gap-3">
