@@ -64,9 +64,18 @@ Il team di Freetime`,
       }),
     });
 
-    const result = await res.json().catch(() => null);
+    const raw = await res.text();
+    let result: { success?: boolean; message?: string } | null = null;
+    try {
+      result = JSON.parse(raw);
+    } catch {
+      result = null;
+    }
+
     if (!res.ok || !result?.success) {
-      console.error("[waitlist] web3forms rejected:", result);
+      console.error(
+        `[waitlist] web3forms rejected — status ${res.status}, body: ${raw}`
+      );
       return NextResponse.json({ ok: false, error: "provider_error" }, { status: 502 });
     }
   } catch (err) {
